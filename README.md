@@ -95,7 +95,6 @@ Fetch's revenue grew from about £46K a month in October 2016 to about £985K a 
 | Blended CAC (ad spend per order acquired) | £45.45 |
 | Customers who buy once | 97% |
 
-All monetary figures are in GBP.
 
 ---
 
@@ -247,7 +246,7 @@ Fifteen SQL queries, grouped by the department that owns the question. Revenue q
 ![Review score distribution](Project%20Images/review-score-distribution.png)
 
 - Median delivery time is 10 days and the mean 12.5, a right-skewed distribution. The 90th percentile is 23 days
-- 6.77% of orders arrive late. A comparison with the Amazon Prime benchmark of about 95 to 96% on-time puts Fetch within two points
+- 12% of orders arrive late. A comparison with the Amazon Prime benchmark of about 95 to 96% on-time puts Fetch below benchmark. 
 - Review scores follow a J-curve: 57.78% five-star and 11.51% one-star. The one-star bucket is 3.6 times the two-star bucket
 - The NPS proxy is +34.85 and the mean review is 4.11
 - Late orders average 2.27 against 4.29 on time, and 62.41% of late orders get a bad review against 9.28%
