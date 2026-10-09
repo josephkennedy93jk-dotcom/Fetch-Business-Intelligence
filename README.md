@@ -47,9 +47,9 @@
 
 ## 1. About This Project
 
-Fetch is a fast-growing multi-seller e-commerce marketplace. Orders and sellers have scaled quickly, but the business has not been data literate: reporting was ad hoc, there was no shared definition of a KPI, and machine learning had never been used. Fetch wants to use its data effectively.
+Fetch is a fast-growing UK multi-seller e-commerce marketplace. Orders and sellers have scaled quickly, but exposure to data has been limited, both in management and in day-to-day usage: leaders had no shared view of the numbers, teams used data little in their decisions, and machine learning had never been used. Fetch wants to use its data effectively.
 
-This project builds that capability from the warehouse up, working as the analyst who joined the team. Fetch is a fictional brand. The underlying data is the public Olist Brazilian E-Commerce dataset (Kaggle), rebranded and extended with synthetic tables for returns, stockouts, inventory, ad spend and CRM fields.
+This project builds that capability from the warehouse up, working as the analyst who joined the team. Fetch is a fictional brand.
 
 Please read the summary deck for the project: [Fetch Analytics Portfolio](<Project Presentation/Fetch_Analytics_Portfolio.pdf>)
 
@@ -70,7 +70,7 @@ What was delivered:
 
 Fetch could see orders and revenue, but not why the numbers moved. The analytics work was organised around one question per department:
 
-- **Sales:** where does revenue come from, and how concentrated is it by category, seller and state?
+- **Sales:** where does revenue come from, and how concentrated is it by category, seller and region?
 - **Marketing:** which acquisition channels bring customers in efficiently, and what drives the cost differences?
 - **Operations:** how reliable is delivery, and what does a late order cost in reviews and returns?
 - **Customer intelligence:** who are the customers, and do they come back?
@@ -81,21 +81,21 @@ Sections 10 to 12 answer these in that order.
 
 ## 3. Executive Summary
 
-Fetch's revenue grew from about 46K a month in October 2016 to about 985K a month by August 2018, without a single-category or single-seller dependency. The weak points sit elsewhere: 97% of customers buy once, a small share of late deliveries causes a large share of bad reviews, and most returns trace back to seller quality.
+Fetch's revenue grew from about £46K a month in October 2016 to about £985K a month by August 2018, without a single-category or single-seller dependency. The weak points sit elsewhere: 97% of customers buy once, a small share of late deliveries causes a large share of bad reviews, and most returns trace back to seller quality.
 
 | Metric | Value |
 |---|---|
 | Period covered | Sep 2016 to Sep 2018 |
 | Delivered orders | 96,478 (97.0% of all orders) |
-| Revenue, delivered orders (price plus freight) | 15.4M BRL |
-| Average order value | 159.83 BRL |
+| Revenue, delivered orders (price plus freight) | £15.4M |
+| Average order value | £159.83 |
 | Average review score | 4.1 out of 5 |
 | Late delivery rate (date-level) | 6.77% |
 | Return rate (items returned, of items sold) | 5.9% |
-| Blended CAC (ad spend per order acquired) | 45.45 BRL |
+| Blended CAC (ad spend per order acquired) | £45.45 |
 | Customers who buy once | 97% |
 
-Figures are in the source currency (BRL) and are not converted.
+All monetary figures are in GBP.
 
 ---
 
@@ -105,7 +105,7 @@ Five findings shaped the recommendations.
 
 - **Late delivery does more damage than its volume suggests.** 6.77% of orders arrive late, yet they cause about 28% of all bad reviews. Late orders average a 2.27 review score against 4.29 for on-time orders, and are 6.7 times more likely to produce a bad review.
 - **Retention is the largest gap.** 97% of customers buy once and 2.76% buy twice, against an indicative 25 to 40% repeat rate for mid-tier marketplaces. Growth is entirely acquisition-driven.
-- **Revenue is concentrated by geography, not by seller or category.** One state (SP) produces 64.57% of revenue and the top three states 81.5%. The top seller is only 1.6% of revenue and the top 20 categories hold about 85%.
+- **Revenue is concentrated by geography, not by seller or category.** One region produces 64.57% of revenue and the top three regions 81.5%. The top seller is only 1.6% of revenue and the top 20 categories hold about 85%.
 - **Seller quality drives returns.** About 59% of returns are seller-preventable: defective product (23.45%), item not as described (21.63%) and wrong item shipped (14.14%).
 - **Channel cost differences come from media prices, not funnel quality.** Click-through and conversion rates are identical across the three paid channels in this dataset, so CAC differs only through CPM. Email is the cheapest channel by a wide margin but also the smallest.
 
@@ -119,19 +119,19 @@ These are areas to explore, drawn from the findings above, not fixed targets.
 With 97% of customers buying once, moving the repeat rate from 3% to 8% would roughly double the revenue base without extra acquisition spend. The largest segment, Satisfied Low-Spend (60.3% of customer records), has the best review scores and is the natural first audience for email re-engagement.
 
 ### 2. Treat late delivery as a customer-satisfaction problem first
-Cutting the late rate by half would remove about 14% of all bad reviews. The first step is to find the seller, state and carrier combinations that account for most late orders.
+Cutting the late rate by half would remove about 14% of all bad reviews. The first step is to find the seller, region and carrier combinations that account for most late orders.
 
 ### 3. Introduce a seller quality scorecard
 Combine return reason mix, review scores and stockout frequency per seller, and use it to decide marketplace visibility. About 59% of returns are in the seller's control.
 
 ### 4. Fix stockout and reorder-point discipline
-Estimated revenue at risk from stockouts is 4.5M BRL (about 29% of realised revenue), an upper bound before substitution. Even assuming half of the missed demand is substituted, 1.8M to 2.7M BRL remains at risk. The South East region accounts for 58% of stockout events.
+Estimated revenue at risk from stockouts is £4.5M (about 29% of realised revenue), an upper bound before substitution. Even assuming half of the missed demand is substituted, £1.8M to £2.7M remains at risk. The South East region accounts for 58% of stockout events.
 
 ### 5. Shift marketing effort towards lower-cost channels and negotiate CPM
-Because funnel quality is equal across paid channels, the only lever on paid cost is media price. Email costs 2.20 BRL per acquired order (CAC) against 43.83 for Paid Search, 57.85 for Paid Social and 76.47 for Display.
+Because funnel quality is equal across paid channels, the only lever on paid cost is media price. Email costs £2.20 per acquired order (CAC) against £43.83 for Paid Search, £57.85 for Paid Social and £76.47 for Display.
 
-### 6. Reduce single-state exposure
-64.57% of revenue from one state is a regional risk. Track state share monthly on the Sales dashboard.
+### 6. Reduce single-region exposure
+64.57% of revenue from one region is a concentration risk. Track regional share monthly on the Sales dashboard.
 
 ### Areas to explore further
 Three areas would need more data: repeat-purchase behaviour at person level (see Section 15), carrier-level delivery performance, and real, not synthetic, ad-funnel data.
@@ -140,7 +140,7 @@ Three areas would need more data: repeat-purchase behaviour at person level (see
 
 ## 6. Data Foundation
 
-The source is the Olist Brazilian E-Commerce Public Dataset (Kaggle, 2016 to 2018), rebranded to Fetch with no `olist_` prefixes in the warehouse. The returns, stockouts, inventory and ad-spend tables, plus the CRM and channel attributes, were generated synthetically to complete the business picture.
+Fetch is a fictional brand and the data has been modelled to represent its business, covering September 2016 to September 2018. The returns, stockouts, inventory and ad-spend tables, plus the CRM and channel attributes, are synthetic and were generated to complete the business picture.
 
 **Scope**
 - 99,441 orders, 112,650 order items, 103,886 payment rows, 104,719 review rows
@@ -205,6 +205,17 @@ Four dashboards: an overall KPI hub plus revenue, marketing and operations views
 
 ![Fetch KPI dashboard](Project%20Images/Dasboards%20Tableau/fetch-business-overall-kpi-dashboar.png)
 
+**Using the dashboards**
+
+Fetch management had little prior exposure to dashboards, so each view is paired with a suggested owner, rhythm and first thing to check. These are suggestions for the team to adapt.
+
+| Dashboard | Suggested owner | Review rhythm | First thing to check |
+|---|---|---|---|
+| Overall KPI hub | Leadership team | Monthly | Revenue, return rate and review score against the previous period |
+| Revenue and sales | Sales | Monthly | Regional share of revenue and category mix |
+| Marketing efficiency | Marketing | Weekly | CAC by channel and the share of orders from Organic and Direct |
+| Operations and delivery | Operations | Weekly | Late delivery rate and its effect on review score |
+
 ---
 
 ## 10. Descriptive Analytics by Department
@@ -215,12 +226,12 @@ Fifteen SQL queries, grouped by the department that owns the question. Revenue q
 
 ![Revenue by product category](Project%20Images/sales-revenue-by-product-category.png)
 
-- Revenue grew from about 46K a month in October 2016 to about 985K a month by August 2018, with a Black Friday peak of about 1.15M in November 2017
+- Revenue grew from about £46K a month in October 2016 to about £985K a month by August 2018, with a Black Friday peak of about £1.15M in November 2017
 - December 2016 shows a single order, most likely a pause or outage
-- Average order value is flat at 155 to 170 BRL across all seven acquisition channels, so channel choice is a volume and cost decision
-- The top 20 categories hold about 85% of revenue and Health Beauty leads with 9%. Average order value ranges from about 132 BRL (Bed Bath Table, 9,272 orders) to about 1,290 BRL (Computers, 177 orders)
-- Top seller is 1.6% of revenue and the top 20 sellers are 22%. 15 of the top 20 are in SP
-- SP is 64.57% of revenue, the top three states 81.5% and the top six about 95%
+- Average order value is flat at £155 to £170 across all seven acquisition channels, so channel choice is a volume and cost decision
+- The top 20 categories hold about 85% of revenue and Health Beauty leads with 9%. Average order value ranges from about £132 (Bed Bath Table, 9,272 orders) to about £1,290 (Computers, 177 orders)
+- Top seller is 1.6% of revenue and the top 20 sellers are 22%. 15 of the top 20 are in the largest region
+- The largest region is 64.57% of revenue, the top three regions 81.5% and the top six about 95%
 
 ### 10.2 Marketing
 
@@ -246,7 +257,7 @@ Fifteen SQL queries, grouped by the department that owns the question. Revenue q
 ![Return reasons](Project%20Images/return-reasons.png)
 
 - Fashion categories have return rates of 14 to 21% and electronics 10 to 12%
-- Computers have the highest cost per return (about 1,088 BRL). Watches and Gifts carry the largest total refund value (123K BRL)
+- Computers have the highest cost per return (about £1,088). Watches and Gifts carry the largest total refund value (£123K)
 - Return reasons: defective 23.45%, item not as described 21.63%, changed mind 21.21%, wrong item 14.14%, damaged in transit 12.41%, late delivery 4.43%, size or fit 2.73%
 - Late delivery causes about 28% of bad reviews but only 4.43% of returns: customers keep a late item and rate the seller one star
 
@@ -258,7 +269,7 @@ Exploratory notebook: [`Fetch Exploratory Analysis- Returns & Reviews.ipynb`](<P
 
 Weekly ad-spend metrics are repeated on every order row after the join, so the Python step deduplicates on `(week_start, acquisition_channel)` before summing. Without that step, spend is overcounted many times over.
 
-| Channel | Spend (BRL) | Orders acquired | Cost per click | CAC (BRL) |
+| Channel | Spend (£) | Orders acquired | Cost per click (£) | CAC (£) |
 |---|---:|---:|---:|---:|
 | Email | 22,750 | 10,319 | 0.73 | 2.20 |
 | Paid Search | 1,076,309 | 24,555 | 1.10 | 43.83 |
@@ -269,7 +280,7 @@ Weekly ad-spend metrics are repeated on every order row after the join, so the P
 
 ![Clicks and impressions by channel](Project%20Images/clicks-and-impressions-per-aquisition-channeel.png)
 
-CAC here is ad spend divided by orders acquired. Click-through rate (2.0%) and conversion rate (2.5%) are identical across the three paid channels, so CAC differs only through CPM (22 to 38 BRL). Email runs at a 7.5% click-through rate and 33.3% conversion rate, but on a small volume. The identical paid-channel rates are an artefact of how the synthetic ad table was generated and would not be expected in real data.
+CAC here is ad spend divided by orders acquired. Click-through rate (2.0%) and conversion rate (2.5%) are identical across the three paid channels, so CAC differs only through CPM (£22 to £38). Email runs at a 7.5% click-through rate and 33.3% conversion rate, but on a small volume. The identical paid-channel rates are an artefact of how the synthetic ad table was generated and would not be expected in real data.
 
 ---
 
@@ -286,7 +297,7 @@ This was Fetch's first machine-learning use case. K-Means groups customer record
 
 ![Customer cluster profile](Project%20Images/k-means-heat-map-cluster-data.png)
 
-| Segment | Records | Share | Avg review | Avg spend | Defining trait |
+| Segment | Records | Share | Avg review | Avg spend (£) | Defining trait |
 |---|---:|---:|---:|---:|---|
 | Satisfied Low-Spend | 59,998 | 60.3% | 4.75 | 115 | Happiest customers, smallest baskets |
 | Dissatisfied Standard | 18,582 | 18.7% | 1.83 | 136 | Poor reviews, no returns: churn risk |
@@ -329,11 +340,10 @@ A model that only rediscovers what the data was built to contain is worse than n
 
 ## 15. Limitations
 
-- **Segmentation unit.** The 99,441 segmented records are one per `customer_id`, which Olist generates per order, not per person. Segment shares describe customer records, not unique people. The 97% one-time-buyer finding uses the person-level key and is not affected.
+- **Segmentation unit.** The 99,441 segmented records are one per `customer_id`, which is generated per order, not per person. Segment shares describe customer records, not unique people. The 97% one-time-buyer finding uses the person-level key and is not affected.
 - **Synthetic tables.** Returns, stockouts, inventory, ad spend and CRM fields are generated. Findings built on them (return reasons, stockout revenue at risk, channel CAC) show the method, not real business results.
 - **Identical paid-channel funnel rates** (2.0% click-through, 2.5% conversion) are a generation artefact.
 - **Delivery timestamps** contain batched values (Section 6, issue 3), which inflate mean delivery time and average days late.
-- **Currency.** Values are in BRL and have not been converted.
 - **Benchmarks** quoted for repeat rate and on-time delivery are indicative.
 - **Stockout revenue at risk** is an upper-bound estimate before substitution.
 
@@ -359,10 +369,9 @@ A model that only rediscovers what the data was built to contain is worse than n
 ## 17. What I'd Do Next
 
 - **Carry `customer_unique_id` through the feature table** so segments describe people, not orders, and add real frequency and monetary features to the model.
-- **Rank worst-performing seller, state and carrier combinations** for late delivery, then track them on the Operations dashboard.
+- **Rank worst-performing seller, region and carrier combinations** for late delivery, then track them on the Operations dashboard.
 - **Build the seller quality scorecard** from return reasons, review scores and stockout frequency.
 - **Add a lifetime-value estimate per segment** to size retention spend.
-- **Add a US state mapping layer** (`dim_geo_translation`) for presentation.
 - **Revisit prediction** once person-level repeat history and real ad data exist.
 
 ---
@@ -372,5 +381,3 @@ A model that only rediscovers what the data was built to contain is worse than n
 **Joseph Kennedy**, Data Analyst
 
 End-to-end delivery: data modelling in BigQuery, SQL analysis, Python analysis and K-Means segmentation, Tableau dashboards and stakeholder communication.
-
-<sub>Fetch is a fictional brand. The underlying data is the public Olist Brazilian E-Commerce dataset (Kaggle), rebranded and extended with synthetic tables for returns, stockouts, inventory, ad spend and CRM fields.</sub>
