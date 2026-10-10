@@ -204,7 +204,13 @@ Four dashboards: an overall KPI hub plus revenue, marketing and operations views
 
 ![Fetch KPI dashboard](Project%20Images/Dasboards%20Tableau/fetch-business-overall-kpi-dashboar.png)
 
-Fetch Revenue Dashboard https://github.com/josephkennedy93jk-dotcom/Fetch-Business-Intelligence/blob/main/Project%20Images/Dasboards%20Tableau/revenue-dashboard-fetch.png
+![Fetch revenue and sales dashboard](Project%20Images/Dasboards%20Tableau/revenue-dashboard-fetch.png)
+
+![Fetch marketing efficiency dashboard](Project%20Images/Dasboards%20Tableau/marketing-dashboard-images.png)
+
+![Fetch operations and delivery dashboard](Project%20Images/Dasboards%20Tableau/fetch-operations-dashboard.png)
+
+
 
 **Using the dashboards**
 
