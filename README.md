@@ -204,6 +204,8 @@ Four dashboards: an overall KPI hub plus revenue, marketing and operations views
 
 ![Fetch KPI dashboard](Project%20Images/Dasboards%20Tableau/fetch-business-overall-kpi-dashboar.png)
 
+Fetch Revenue Dashboard https://github.com/josephkennedy93jk-dotcom/Fetch-Business-Intelligence/blob/main/Project%20Images/Dasboards%20Tableau/revenue-dashboard-fetch.png
+
 **Using the dashboards**
 
 Fetch management had little prior exposure to dashboards, so each view is paired with a suggested owner, rhythm and first thing to check. These are suggestions for the team to adapt.
