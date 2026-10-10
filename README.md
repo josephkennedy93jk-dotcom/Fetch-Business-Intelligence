@@ -90,7 +90,7 @@ Fetch's revenue grew from about £46K a month in October 2016 to about £985K a 
 | Revenue, delivered orders (price plus freight) | £15.4M |
 | Average order value | £159.83 |
 | Average review score | 4.1 out of 5 |
-| Late delivery rate (date-level) | 6.77% |
+| Late delivery rate (date-level) | 12% |
 | Return rate (items returned, of items sold) | 5.9% |
 | Blended CAC (ad spend per order acquired) | £45.45 |
 | Customers who buy once | 97% |
