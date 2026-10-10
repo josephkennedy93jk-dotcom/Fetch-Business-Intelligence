@@ -102,7 +102,7 @@ Fetch's revenue grew from about £46K a month in October 2016 to about £985K a 
 
 Five findings shaped the recommendations.
 
-- **Late delivery does more damage than its volume suggests.** 6.77% of orders arrive late, yet they cause about 28% of all bad reviews. Late orders average a 2.27 review score against 4.29 for on-time orders, and are 6.7 times more likely to produce a bad review.
+- **Late delivery does more damage than its volume suggests.** 12% of orders arrive late, yet they cause about 28% of all bad reviews. Late orders average a 2.27 review score against 4.29 for on-time orders, and are 6.7 times more likely to produce a bad review.
 - **Retention is the largest gap.** 97% of customers buy once and 2.76% buy twice, against an indicative 25 to 40% repeat rate for mid-tier marketplaces. Growth is entirely acquisition-driven.
 - **Revenue is concentrated by geography, not by seller or category.** One region produces 64.57% of revenue and the top three regions 81.5%. The top seller is only 1.6% of revenue and the top 20 categories hold about 85%.
 - **Seller quality drives returns.** About 59% of returns are seller-preventable: defective product (23.45%), item not as described (21.63%) and wrong item shipped (14.14%).
